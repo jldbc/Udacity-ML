@@ -1,4 +1,3 @@
-
 import random
 from environment import Agent, Environment
 from planner import RoutePlanner
@@ -14,7 +13,7 @@ class LearningAgent(Agent):
         # TODO: Initialize any additional variables here
         self.actions = (None, 'forward', 'left', 'right')
         self.Q = {} #hashable Q-Table
-        self.default_Q = 0
+        self.default_Q = 1   #initially tried zero
         self.epsilon = epsilon #controls frequency of random actions [note: not used when implementing epsilon decay]
         self.epsilon_decay = epsilon_decay #decay rate (multiplier) for GLIE
         self.alpha = 1  # learning rate [note: not used when updating/decaying alpha]
